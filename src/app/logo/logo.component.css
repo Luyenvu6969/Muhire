@@ -1,0 +1,24 @@
+/* Default logo size */
+.site-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;         /* Start with a small size for the logo */
+    height: auto;        /* Maintain aspect ratio */
+    z-index: 1000;       /* Ensure it's on top */
+  }
+  
+  /* Medium screens (tablets, small laptops) */
+  @media (max-width: 768px) {
+    .site-logo {
+      width: 30px;      /* Reduce the size on tablet screens */
+    }
+  }
+  
+  /* Small screens (phones) */
+  @media (max-width: 480px) {
+    .site-logo {
+      width: 20px;      /* Even smaller on very small screens */
+    }
+  }
+  

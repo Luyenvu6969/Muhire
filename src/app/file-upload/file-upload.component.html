@@ -1,0 +1,21 @@
+<div class="file-upload-container">
+    <input type="file" (change)="onFileSelected($event)" #fileInput />
+    <button (click)="uploadFile()">Upload</button>
+  
+    <div class="media-preview" *ngIf="mediaUrls.length > 0">
+      <div *ngFor="let media of mediaUrls; let i = index" class="media-container" (click)="openFullScreen(media)">
+        <img *ngIf="media.type === 'image'" [src]="media.url" />
+        <video #video *ngIf="media.type === 'video'" [src]="media.url" autoplay loop></video>
+      </div>
+    </div>
+  
+    <div class="fullscreen-modal" *ngIf="isFullScreen" (click)="closeFullScreen()">
+      <div *ngIf="fullScreenMedia.type === 'image'">
+        <img [src]="fullScreenMedia.url" class="fullscreen-media" />
+      </div>
+      <div *ngIf="fullScreenMedia.type === 'video'">
+        <video [src]="fullScreenMedia.url" autoplay loop class="fullscreen-media"></video>
+      </div>
+    </div>
+  </div>
+  

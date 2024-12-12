@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+/* Apply to the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure the body fills the entire viewport */
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
+    background-size: 600% 600%; /* Makes the gradient larger for smooth animation */
+    animation: gradientShift 10s ease infinite; /* Animates the gradient */
+  }
+  
+  /* Keyframes for the gradient shift animation */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

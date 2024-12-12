@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { LogoComponent } from './logo/logo.component'; // Import LogoComponent correctly
+import { FileUploadComponent } from './file-upload/file-upload.component'; // Import FileUploadComponent correctly
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,  // This makes the component standalone
+  imports: [LogoComponent, FileUploadComponent],  // Import both LogoComponent and FileUploadComponent
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'my-app';
